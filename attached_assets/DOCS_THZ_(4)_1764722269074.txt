@@ -1,0 +1,181 @@
+﻿I need you to design and generate a complete institutional website for a high-profile Brazilian criminal lawyer, following the design style, branding rules, tone, and structure described below. The site must look sophisticated, elegant, minimalistic, and highly professional — not marketing-oriented or generic. Prioritize authority, credibility, academic background, and expertise.
+
+
+====================================================
+1. BRAND CONTEXT & POSITIONING
+====================================================
+Client: Thaís Zanetti de Mello Moretto  
+Profession: Criminal Lawyer (Advogada Criminalista) + Psychologist  
+Experience: 20+ years of teaching and legal practice  
+Territory: National (Brazil) — In-person in Porto Alegre, Online nationwide  
+Main qualities to communicate:  
+- High-level knowledge  
+- Professionalism  
+- Academic authority  
+- Technical excellence  
+- Institutional credibility  
+
+
+Core differentiator: Dual training in Law + Psychology, combined with extensive academic background, published works, and media presence.
+
+
+====================================================
+2. DESIGN STYLE (design.json guidelines)
+====================================================
+
+
+Overall Style:
+- Institutional, elegant, premium, minimalistic
+- Strong sense of professionalism and authority
+- Avoid any marketing clichés, animations, emojis, or flashy elements
+- Layout must be clean with generous spacing and balanced typography
+
+
+Color Palette:
+- Primary: #0D0D0D (black)
+- Secondary: #F8F9FA (off-white)
+- Accent: #D3AF37 (gold — must be subtle, refined, and never overused)
+
+
+Typography:
+- Headings: Sora
+- Body text: Poppins
+- Decorative / minimal accent titles: Vogum (sparingly)
+- Ensure typography conveys seriousness and expertise
+- Large spacing between sections (premium editorial feel)
+
+
+Layout Principles:
+- Wide margins
+- Full-width hero section
+- Minimal use of images; prioritize strong portrait of the lawyer
+- Use black-and-gold contrast only in accents (buttons, section dividers, small lines)
+- White space must dominate to give a premium feel
+
+
+Components:
+- Hero section: two columns, portrait photo + headline
+- Section headers: uppercase subtle gold accents
+- Cards: minimal border, soft shadow, elegant spacing
+- Footer: full-width black background, gold text accents
+
+
+Visual Direction:
+- Use high-quality portrait of the lawyer
+- Use elegant legal imagery (books, court rooms, minimalistic symbolism)
+- No stock images that look generic or cheesy
+- Optional use of black-and-white photography for authority
+
+
+====================================================
+3. SITE STRUCTURE (INSTITUTIONAL)
+====================================================
+
+
+This is not a one-page landing; it's a full institutional website with multiple index pages.
+
+
+MAIN PAGE (HOME)
+1. Hero Section  
+   - Black background or light minimal version  
+   - High-quality photo of Thaís  
+   - Headline: “Criminal Law and Corporate Risk Management with Academic Excellence”  
+   - Subheadline: “20+ years of legal practice, teaching, research, and national-level expertise.”  
+   - CTA #1: WhatsApp button (fixed in the layout)  
+   - CTA #2: Secondary button linking to the contact form
+
+
+2. Summary of Expertise  
+   - Brief overview of her practice areas  
+   - Cards linking to subpages:
+     * Criminal Economic Law  
+     * Compliance & Internal Investigations  
+     * Corporate Risk & Gender Compliance  
+     * Digital Crimes & Reputation Protection  
+
+
+3. Dual Formation (Law + Psychology)  
+   - Highlight this as a unique professional advantage
+
+
+4. Academic Authority  
+   - Short summary + link to full résumé page
+
+
+5. Publications  
+   - Preview of books and academic works  
+   - Button: “See full publications index”
+
+
+6. Documentary Participation  
+   - Highlight participation in award-winning documentary  
+   - Button: “Learn more about the documentary”
+
+
+7. Presence in Media  
+   - TV, radio, interviews  
+   - Button to dedicated media page
+
+
+8. Citações em Tribunais  
+   - Show cases where her work or publications were cited by higher courts  
+   - Link to full index page
+
+
+9. Contact Section  
+   - WhatsApp  
+   - Contact form  
+   - Address (Porto Alegre)  
+   - Map if needed
+
+
+10. Footer  
+   - Logo  
+   - Navigation  
+   - Privacy Policy  
+   - Terms of Use  
+
+
+====================================================
+4. SUBPAGES TO GENERATE
+====================================================
+The AI must generate these independent index pages:
+
+
+1. About / Full Curriculum (detailed résumé)  
+2. Publications Index  
+3. Documentary Page  
+4. Media (TV, radio, interviews)  
+5. Court Citations Index  
+6. Practice Areas (each with its own detailed page)
+
+
+====================================================
+5. TONE OF VOICE
+====================================================
+- Professional  
+- Technical  
+- High-level  
+- Zero exaggeration  
+- No marketing tone  
+- Institutional language  
+
+
+====================================================
+6. CALL TO ACTION
+====================================================
+Primary: WhatsApp contact button  
+Secondary: Contact form  
+
+
+====================================================
+7. OUTPUT EXPECTATIONS
+====================================================
+You must:
+
+
+1. Generate a full website structure  
+2. Generate consistent UI layouts for each section  
+3. Use the design.json rules above to ensure stylistic consistency  
+4. Generate images (if requested) according to the premium/institutional style  
+5. Deliver everything in React + Tailwind + shadcn components (or the requested stack)

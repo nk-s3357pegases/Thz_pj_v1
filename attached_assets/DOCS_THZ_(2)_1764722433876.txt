@@ -1,0 +1,10 @@
+﻿Fontes do site:
+-Sora
+-Poppins
+-Fonte moderna minima vogum
+
+Paleta de cores:
+
+#F8F9FA
+#0D0D0D
+##D3AF37
