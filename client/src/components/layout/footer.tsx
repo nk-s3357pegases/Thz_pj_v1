@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import logoImage from "@assets/logos/logo_sem_fundo.png";
 
 export function Footer() {
   return (
@@ -6,9 +7,13 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-2">
-            <h2 className="text-2xl font-heading font-bold tracking-tighter uppercase mb-6">
-              Thaís<span className="text-accent">.</span>Zanetti
-            </h2>
+            <div className="mb-6">
+              <img 
+                src={logoImage} 
+                alt="Thaís Zanetti" 
+                className="w-48 md:w-64 h-auto object-contain"
+              />
+            </div>
             <p className="text-primary-foreground/60 max-w-md mb-8 font-light leading-relaxed">
               Advocacia Criminal e Gestão de Risco Corporativo com excelência acadêmica. 
               Atuação nacional com sede em Porto Alegre.

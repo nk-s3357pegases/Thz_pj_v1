@@ -4,6 +4,8 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
+import logoImage from "@assets/logos/logo_sem_fundo.png";
+
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -31,19 +33,21 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out border-b",
         scrolled 
-          ? "bg-white/90 backdrop-blur-md py-4 border-border/40 shadow-sm text-foreground" 
-          : "bg-transparent py-6 border-transparent text-white"
+          ? "bg-white/90 backdrop-blur-md py-2 border-border/40 shadow-sm text-foreground" 
+          : "bg-transparent py-4 border-transparent text-white"
       )}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/">
-          <a className="group flex flex-col">
-            <span className={cn("text-2xl font-heading font-bold tracking-tighter uppercase transition-colors", scrolled ? "text-foreground" : "text-white")}>
-              Thaís<span className="text-accent">.</span>Zanetti
-            </span>
-            <span className={cn("text-[0.65rem] tracking-[0.3em] uppercase font-medium opacity-80 transition-colors group-hover:text-accent", scrolled ? "text-muted-foreground" : "text-white/80")}>
-              Advocacia Criminal
-            </span>
+          <a className="group block">
+            <img 
+              src={logoImage} 
+              alt="Thaís Zanetti" 
+              className={cn(
+                "transition-all duration-500 h-auto object-contain",
+                scrolled ? "w-40 md:w-48 invert" : "w-48 md:w-56 invert-0"
+              )}
+            />
           </a>
         </Link>
 
