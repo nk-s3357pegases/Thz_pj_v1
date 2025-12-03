@@ -45,7 +45,7 @@ export function Navbar() {
               alt="Thaís Zanetti" 
               className={cn(
                 "transition-all duration-500 h-auto object-contain",
-                scrolled ? "w-24 md:w-32 invert" : "w-32 md:w-40 invert-0"
+                scrolled ? "w-20 md:w-28" : "w-32 md:w-40 brightness-0 invert"
               )}
             />
           </a>

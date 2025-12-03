@@ -203,7 +203,7 @@ export default function Home() {
       {/* Areas of Expertise - Cards */}
       <section className="py-24 bg-[#F8F9FA] relative overflow-hidden">
         {/* Background Statue */}
-        <div className="absolute left-0 bottom-0 h-[800px] w-[600px] opacity-5 z-0 hidden lg:block pointer-events-none">
+        <div className="absolute left-0 bottom-0 h-[800px] w-[600px] opacity-10 z-0 hidden lg:block pointer-events-none mix-blend-multiply">
             <img 
                 src={statueImage} 
                 alt="Themis" 
