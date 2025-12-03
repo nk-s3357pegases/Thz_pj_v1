@@ -155,43 +155,46 @@ export default function Home() {
       </section>
 
       {/* National Acting - STJ Photo Section */}
-      <section className="relative py-32 bg-zinc-900 text-white overflow-hidden">
-         <div className="absolute inset-0 z-0">
-            <img 
-               src={stjPhoto} 
-               alt="Atuação no STJ" 
-               className="w-full h-full object-cover opacity-30"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
-         </div>
-         
-         <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-2xl">
-               <div className="flex items-center gap-3 mb-6">
-                  <MapPin className="w-5 h-5 text-accent" />
-                  <span className="text-accent uppercase tracking-widest text-sm font-bold">Presença Nacional</span>
-               </div>
-               <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 leading-tight">
-                  Atuação nos Tribunais Superiores
-               </h2>
-               <p className="text-xl text-white/70 mb-10 leading-relaxed font-light border-l-2 border-accent pl-6">
-                  Sede em Porto Alegre, com atuação consolidada em Brasília e em todo o território nacional. Expertise na condução de recursos e sustentações orais perante o STJ e STF.
-               </p>
-               <div className="grid grid-cols-2 gap-8 mb-10">
-                  <div>
-                     <h4 className="text-white font-bold uppercase mb-2">Brasília</h4>
-                     <p className="text-white/50 text-sm">STJ, STF e Tribunais Regionais</p>
+      <section className="bg-zinc-900 text-white">
+         <div className="grid md:grid-cols-2">
+            {/* Text Content */}
+            <div className="relative z-10 flex items-center p-12 md:p-24 bg-zinc-900 order-2 md:order-1">
+               <div className="max-w-xl">
+                  <div className="flex items-center gap-3 mb-6">
+                     <MapPin className="w-5 h-5 text-accent" />
+                     <span className="text-accent uppercase tracking-widest text-sm font-bold">Presença Nacional</span>
                   </div>
-                  <div>
-                     <h4 className="text-white font-bold uppercase mb-2">Online</h4>
-                     <p className="text-white/50 text-sm">Atendimento digital completo</p>
+                  <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 leading-tight">
+                     Atuação nos Tribunais Superiores
+                  </h2>
+                  <p className="text-lg text-white/70 mb-10 leading-relaxed font-light border-l-2 border-accent pl-6">
+                     Sede em Porto Alegre, com atuação consolidada em Brasília e em todo o território nacional. Expertise na condução de recursos e sustentações orais perante o STJ e STF.
+                  </p>
+                  <div className="grid grid-cols-2 gap-8 mb-10">
+                     <div>
+                        <h4 className="text-white font-bold uppercase mb-2">Brasília</h4>
+                        <p className="text-white/50 text-sm">STJ, STF e Tribunais Regionais</p>
+                     </div>
+                     <div>
+                        <h4 className="text-white font-bold uppercase mb-2">Online</h4>
+                        <p className="text-white/50 text-sm">Atendimento digital completo</p>
+                     </div>
                   </div>
+                  <Link href="/citacoes">
+                     <Button className="bg-white text-black hover:bg-accent hover:text-black rounded-none px-8 h-12 uppercase tracking-widest font-bold text-xs">
+                        Ver Citações em Tribunais
+                     </Button>
+                  </Link>
                </div>
-               <Link href="/citacoes">
-                  <Button className="bg-white text-black hover:bg-accent hover:text-black rounded-none px-8 h-12 uppercase tracking-widest font-bold text-xs">
-                     Ver Citações em Tribunais
-                  </Button>
-               </Link>
+            </div>
+
+            {/* Image Side - Full, Uncut */}
+            <div className="relative h-full min-h-[400px] md:min-h-full bg-zinc-800 order-1 md:order-2">
+               <img 
+                  src={stjPhoto} 
+                  alt="Atuação no STJ" 
+                  className="w-full h-full object-contain md:object-cover object-center bg-zinc-900"
+               />
             </div>
          </div>
       </section>
