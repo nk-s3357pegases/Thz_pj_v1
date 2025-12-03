@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import { ArrowRight, BookOpen, Scale, Shield, Users, MapPin, Award, FileText } from "lucide-react";
 import heroPortrait from '@assets/image_1764723438021.png';
 import stjPhoto from '@assets/image_1764722976853.png';
+import statueImage from '@assets/image_1764723980701.png';
 
 export default function Home() {
   return (
@@ -200,8 +201,17 @@ export default function Home() {
       </section>
 
       {/* Areas of Expertise - Cards */}
-      <section className="py-24 bg-[#F8F9FA]">
-        <div className="container mx-auto px-6">
+      <section className="py-24 bg-[#F8F9FA] relative overflow-hidden">
+        {/* Background Statue */}
+        <div className="absolute left-0 bottom-0 h-[800px] w-[600px] opacity-5 z-0 hidden lg:block pointer-events-none">
+            <img 
+                src={statueImage} 
+                alt="Themis" 
+                className="w-full h-full object-contain object-bottom"
+            />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 uppercase tracking-tight">Áreas de Atuação</h2>
             <div className="w-12 h-1 bg-accent mx-auto mb-6"></div>
