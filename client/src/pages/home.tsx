@@ -5,7 +5,7 @@ import { Link } from "wouter";
 import { ArrowRight, BookOpen, Scale, Shield, Users, MapPin, Award, FileText } from "lucide-react";
 import heroPortrait from '@assets/image_1764723438021.png';
 import stjPhoto from '@assets/image_1764722976853.png';
-import statueImage from '@assets/image_1764723980701.png';
+import statueImage from '@assets/Design_sem_nome_(13)_1764724410306.png';
 
 export default function Home() {
   return (
@@ -202,15 +202,6 @@ export default function Home() {
 
       {/* Areas of Expertise - Cards */}
       <section className="py-24 bg-[#F8F9FA] relative overflow-hidden">
-        {/* Background Statue */}
-        <div className="absolute left-0 bottom-0 h-[800px] w-[600px] opacity-10 z-0 hidden lg:block pointer-events-none mix-blend-multiply">
-            <img 
-                src={statueImage} 
-                alt="Themis" 
-                className="w-full h-full object-contain object-bottom"
-            />
-        </div>
-
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 uppercase tracking-tight">Áreas de Atuação</h2>
@@ -220,44 +211,58 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: Scale,
-                title: "Direito Penal Econômico",
-                desc: "Defesa em crimes tributários, financeiros e lavagem de capitais."
-              },
-              {
-                icon: Shield,
-                title: "Compliance Criminal",
-                desc: "Programas de integridade e gestão de risco corporativo."
-              },
-              {
-                icon: Users,
-                title: "Consultoria de Gênero",
-                desc: "Abordagem psicológica e jurídica para casos de assédio."
-              },
-              {
-                icon: BookOpen,
-                title: "Crimes Digitais",
-                desc: "Proteção da reputação e crimes contra a honra no ambiente digital."
-              }
-            ].map((item, index) => (
-              <Card key={index} className="border border-border/50 bg-white shadow-sm hover:shadow-xl hover:border-accent/50 transition-all duration-300 group">
-                <CardContent className="pt-8 px-6 pb-8 text-center">
-                  <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
-                     <item.icon className="w-7 h-7 text-foreground group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="text-lg font-heading font-bold mb-4 uppercase tracking-wide">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">{item.desc}</p>
-                  <Link href="/atuacao">
-                     <a className="text-accent text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
-                        Saiba Mais <ArrowRight className="w-3 h-3" />
-                     </a>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+             {/* Left Column: Statue Image - Full Visibility */}
+             <div className="lg:col-span-5 flex justify-center lg:justify-start h-[600px] relative">
+                <div className="relative w-full h-full">
+                   <img 
+                       src={statueImage} 
+                       alt="Themis" 
+                       className="w-full h-full object-contain object-center lg:object-left drop-shadow-2xl"
+                   />
+                </div>
+             </div>
+
+             {/* Right Column: Action Cards */}
+             <div className="lg:col-span-7 grid md:grid-cols-2 gap-6">
+                {[
+                  {
+                    icon: Scale,
+                    title: "Direito Penal Econômico",
+                    desc: "Defesa em crimes tributários, financeiros e lavagem de capitais."
+                  },
+                  {
+                    icon: Shield,
+                    title: "Compliance Criminal",
+                    desc: "Programas de integridade e gestão de risco corporativo."
+                  },
+                  {
+                    icon: Users,
+                    title: "Consultoria de Gênero",
+                    desc: "Abordagem psicológica e jurídica para casos de assédio."
+                  },
+                  {
+                    icon: BookOpen,
+                    title: "Crimes Digitais",
+                    desc: "Proteção da reputação e crimes contra a honra no ambiente digital."
+                  }
+                ].map((item, index) => (
+                  <Card key={index} className="border border-border/50 bg-white shadow-sm hover:shadow-xl hover:border-accent/50 transition-all duration-300 group h-full">
+                    <CardContent className="pt-8 px-6 pb-8 text-center flex flex-col items-center h-full">
+                      <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                         <item.icon className="w-7 h-7 text-foreground group-hover:text-white transition-colors" />
+                      </div>
+                      <h3 className="text-lg font-heading font-bold mb-4 uppercase tracking-wide">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">{item.desc}</p>
+                      <Link href="/atuacao">
+                         <a className="text-accent text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 mt-auto">
+                            Saiba Mais <ArrowRight className="w-3 h-3" />
+                         </a>
+                      </Link>
+                    </CardContent>
+                  </Card>
+                ))}
+             </div>
           </div>
         </div>
       </section>

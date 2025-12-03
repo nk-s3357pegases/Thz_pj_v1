@@ -8,16 +8,7 @@ import logoImage from "@assets/logos/logo_sem_fundo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const navLinks = [
     { href: "/", label: "Início" },
@@ -29,24 +20,14 @@ export function Navbar() {
   ];
 
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out border-b",
-        scrolled 
-          ? "bg-white/90 backdrop-blur-md py-2 border-border/40 shadow-sm text-foreground" 
-          : "bg-transparent py-4 border-transparent text-white"
-      )}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white py-4 border-b border-border/40 shadow-sm text-foreground">
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/">
           <a className="group block">
             <img 
               src={logoImage} 
               alt="Thaís Zanetti" 
-              className={cn(
-                "transition-all duration-500 h-auto object-contain",
-                scrolled ? "w-20 md:w-28" : "w-32 md:w-40 brightness-0 invert"
-              )}
+              className="w-24 md:w-32 h-auto object-contain"
             />
           </a>
         </Link>
@@ -57,8 +38,8 @@ export function Navbar() {
             <Link key={link.href} href={link.href}>
               <a
                 className={cn(
-                  "text-xs font-medium transition-colors hover:text-accent uppercase tracking-widest relative py-2",
-                  location === link.href ? "text-accent" : (scrolled ? "text-foreground/80" : "text-white/90"),
+                  "text-xs font-medium transition-colors hover:text-accent uppercase tracking-widest relative py-2 text-foreground/80",
+                  location === link.href ? "text-accent" : "",
                   "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
                 )}
               >
@@ -68,10 +49,7 @@ export function Navbar() {
           ))}
           <Button 
             variant="outline" 
-            className={cn(
-              "border-accent text-accent hover:bg-accent hover:text-white rounded-none px-6 tracking-widest uppercase text-xs transition-all duration-300",
-              scrolled ? "bg-transparent" : "bg-white/5 backdrop-blur-sm border-accent/50 text-white hover:border-accent"
-            )}
+            className="border-accent text-accent hover:bg-accent hover:text-white rounded-none px-6 tracking-widest uppercase text-xs transition-all duration-300 bg-transparent"
             onClick={() => window.open("https://wa.me/5551999785539", "_blank")}
           >
             Contato
@@ -79,7 +57,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button className={cn("md:hidden transition-colors", scrolled ? "text-foreground" : "text-white")} onClick={() => setIsOpen(!isOpen)}>
+        <button className="md:hidden text-foreground transition-colors" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
