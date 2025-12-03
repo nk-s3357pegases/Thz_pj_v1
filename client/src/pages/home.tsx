@@ -2,184 +2,251 @@ import { Layout } from "@/components/layout/layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
-import { ArrowRight, BookOpen, Scale, Shield, Users } from "lucide-react";
-import stockImage from '@assets/stock_images/professional_female__14e64741.jpg';
-import officeImage from '@assets/stock_images/minimalist_law_offic_d074c503.jpg';
+import { ArrowRight, BookOpen, Scale, Shield, Users, MapPin, Award, FileText } from "lucide-react";
+import heroPortrait from '@assets/image_1764723438021.png';
+import stjPhoto from '@assets/image_1764722976853.png';
 
 export default function Home() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-primary text-primary-foreground overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
-           {/* Minimalist abstract background or texture could go here */}
-           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-zinc-800 to-zinc-950"></div>
+      {/* Hero Section - Dark & Sophisticated */}
+      <section className="relative min-h-[90vh] flex items-center bg-[#0a0a0a] text-white overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 z-0">
+           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,rgba(211,175,55,0.08),transparent_50%)]"></div>
+           <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.03),transparent_50%)]"></div>
         </div>
         
-        <div className="container mx-auto px-6 z-10 grid md:grid-cols-2 gap-12 items-center pt-20 md:pt-0">
-          <div className="order-2 md:order-1 animate-in slide-in-from-left-10 duration-1000 fade-in">
-            <h2 className="text-accent font-serif italic text-xl md:text-2xl mb-6">
-              Advogada Criminalista & Psicóloga
-            </h2>
-            <h1 className="text-4xl md:text-6xl font-heading font-bold leading-tight mb-6 tracking-tight">
-              Direito Penal e <br/>
-              <span className="text-white/90">Gestão de Risco Corporativo</span>
-            </h1>
-            <p className="text-lg md:text-xl text-white/70 max-w-lg mb-10 font-light leading-relaxed border-l-2 border-accent pl-6">
-              Excelência acadêmica aliada a mais de 20 anos de prática jurídica, docência e pesquisa.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                className="bg-accent text-primary hover:bg-white hover:text-primary rounded-none h-14 px-8 text-sm uppercase tracking-widest font-semibold transition-all"
-                onClick={() => window.open("https://wa.me/5551999785539", "_blank")}
-              >
-                Fale no WhatsApp
-              </Button>
-              <Link href="/contact">
+        <div className="container mx-auto px-6 z-10 pt-24 md:pt-0">
+          <div className="grid md:grid-cols-12 gap-12 items-center">
+            
+            {/* Text Content */}
+            <div className="md:col-span-7 order-2 md:order-1 animate-in slide-in-from-left-10 duration-1000 fade-in relative">
+              {/* Decorative Line */}
+              <div className="w-24 h-[1px] bg-accent mb-8"></div>
+              
+              <h2 className="text-accent font-serif italic text-xl md:text-2xl mb-4 tracking-wide">
+                Advocacia Criminal & Psicologia Jurídica
+              </h2>
+              
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] mb-8 tracking-tight">
+                Defesa Técnica <br/>
+                <span className="text-white/80 font-serif italic font-normal">de Alta Complexidade</span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-white/60 max-w-xl mb-12 font-light leading-relaxed">
+                Atuação estratégica em Direito Penal Econômico e Gestão de Crise Corporativa. Mais de 20 anos de excelência acadêmica e prática forense.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6">
                 <Button 
-                  variant="outline" 
-                  className="border-white/20 text-white hover:bg-white/10 rounded-none h-14 px-8 text-sm uppercase tracking-widest font-semibold"
+                  className="bg-accent text-primary hover:bg-white hover:text-primary rounded-none h-14 px-10 text-sm uppercase tracking-widest font-bold transition-all shadow-[0_0_20px_rgba(211,175,55,0.3)] hover:shadow-[0_0_30px_rgba(211,175,55,0.5)]"
+                  onClick={() => window.open("https://wa.me/5551999785539", "_blank")}
                 >
-                  Entrar em Contato
+                  Agendar Consulta
                 </Button>
-              </Link>
+                <Link href="/sobre">
+                   <Button 
+                    variant="outline" 
+                    className="border-white/20 text-white hover:bg-white hover:text-primary rounded-none h-14 px-10 text-sm uppercase tracking-widest font-bold backdrop-blur-sm"
+                  >
+                    Conhecer Trajetória
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Credentials Strip */}
+              <div className="mt-16 pt-8 border-t border-white/10 grid grid-cols-3 gap-8 text-center md:text-left">
+                 <div>
+                    <h4 className="text-2xl font-bold text-white">20+</h4>
+                    <p className="text-xs text-white/40 uppercase tracking-widest">Anos de Experiência</p>
+                 </div>
+                 <div>
+                    <h4 className="text-2xl font-bold text-white">MSc</h4>
+                    <p className="text-xs text-white/40 uppercase tracking-widest">Mestre em C. Criminais</p>
+                 </div>
+                 <div>
+                    <h4 className="text-2xl font-bold text-white">Nacional</h4>
+                    <p className="text-xs text-white/40 uppercase tracking-widest">Atuação em todo Brasil</p>
+                 </div>
+              </div>
             </div>
-          </div>
-          
-          <div className="order-1 md:order-2 relative h-[60vh] md:h-[85vh] w-full animate-in slide-in-from-right-10 duration-1000 fade-in delay-200">
-            <div className="absolute inset-0 bg-accent/10 rounded-sm translate-x-4 translate-y-4 hidden md:block"></div>
-            <img 
-              src={stockImage} 
-              alt="Thaís Zanetti" 
-              className="w-full h-full object-cover object-top filter grayscale hover:grayscale-0 transition-all duration-700 rounded-sm shadow-2xl"
-            />
+            
+            {/* Hero Image - Pink Blazer Portrait */}
+            <div className="md:col-span-5 order-1 md:order-2 relative h-[50vh] md:h-[80vh] w-full animate-in slide-in-from-bottom-10 duration-1000 fade-in delay-200 flex justify-center md:justify-end">
+              <div className="relative w-full max-w-md h-full">
+                {/* Frame Effect */}
+                <div className="absolute top-4 right-4 w-full h-full border border-accent/30 hidden md:block"></div>
+                <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-accent/10 -z-10 hidden md:block"></div>
+                
+                <img 
+                  src={heroPortrait} 
+                  alt="Thaís Zanetti" 
+                  className="w-full h-full object-cover object-top shadow-2xl"
+                  style={{ boxShadow: "0 20px 50px -12px rgba(0, 0, 0, 0.5)" }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Summary of Expertise */}
-      <section className="py-24 bg-background">
+      {/* Resume / Bio Section - Prominent */}
+      <section className="py-24 bg-white relative">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-border pb-6">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-2 uppercase tracking-tight">Áreas de Atuação</h2>
-              <p className="text-muted-foreground font-serif italic">Expertise técnica e acadêmica</p>
+          <div className="grid md:grid-cols-12 gap-12 items-start">
+             <div className="md:col-span-5 relative">
+                <div className="bg-secondary p-8 md:p-12 border-l-4 border-accent">
+                   <h3 className="font-heading font-bold text-2xl uppercase mb-6">Formação de Excelência</h3>
+                   <ul className="space-y-6">
+                      <li className="flex gap-4 items-start">
+                         <Award className="w-6 h-6 text-accent shrink-0 mt-1" />
+                         <div>
+                            <h4 className="font-bold text-foreground">Mestre em Ciências Criminais</h4>
+                            <p className="text-sm text-muted-foreground">PUCRS (2010) - Aprovada com Louvor</p>
+                         </div>
+                      </li>
+                      <li className="flex gap-4 items-start">
+                         <Award className="w-6 h-6 text-accent shrink-0 mt-1" />
+                         <div>
+                            <h4 className="font-bold text-foreground">Especialista em Filosofia</h4>
+                            <p className="text-sm text-muted-foreground">PUCRS (2011) - Grau Máximo</p>
+                         </div>
+                      </li>
+                      <li className="flex gap-4 items-start">
+                         <Award className="w-6 h-6 text-accent shrink-0 mt-1" />
+                         <div>
+                            <h4 className="font-bold text-foreground">Psicóloga Graduada</h4>
+                            <p className="text-sm text-muted-foreground">Formação complementar estratégica</p>
+                         </div>
+                      </li>
+                   </ul>
+                   <div className="mt-8 pt-6 border-t border-border">
+                      <Link href="/publicacoes">
+                        <a className="text-accent uppercase text-xs font-bold tracking-widest hover:underline flex items-center gap-2">
+                           Ver Publicações Acadêmicas <ArrowRight className="w-3 h-3" />
+                        </a>
+                      </Link>
+                   </div>
+                </div>
+             </div>
+             
+             <div className="md:col-span-7">
+                <h2 className="text-sm font-bold text-accent uppercase tracking-widest mb-4">Sobre a Profissional</h2>
+                <h3 className="text-3xl md:text-4xl font-heading font-bold mb-6 leading-tight">
+                   Uma trajetória marcada pelo rigor técnico e pela defesa intransigente.
+                </h3>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-6 font-light">
+                   Thaís Zanetti não é apenas uma advogada; é uma estrategista jurídica com dupla formação. A psicologia aplicada ao direito penal permite uma leitura diferenciada de processos, testemunhas e cenários de crise.
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-8 font-light">
+                   Com forte atuação nos tribunais superiores e em casos de repercussão, o escritório se destaca pela discrição, combatividade e profundidade teórica em cada defesa.
+                </p>
+                <div className="flex gap-4">
+                   <Link href="/sobre">
+                      <Button variant="outline" className="rounded-none border-foreground text-foreground hover:bg-foreground hover:text-background uppercase tracking-widest text-xs h-12 px-8">
+                         Biografia Completa
+                      </Button>
+                   </Link>
+                </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* National Acting - STJ Photo Section */}
+      <section className="relative py-32 bg-zinc-900 text-white overflow-hidden">
+         <div className="absolute inset-0 z-0">
+            <img 
+               src={stjPhoto} 
+               alt="Atuação no STJ" 
+               className="w-full h-full object-cover opacity-30"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+         </div>
+         
+         <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-2xl">
+               <div className="flex items-center gap-3 mb-6">
+                  <MapPin className="w-5 h-5 text-accent" />
+                  <span className="text-accent uppercase tracking-widest text-sm font-bold">Presença Nacional</span>
+               </div>
+               <h2 className="text-4xl md:text-6xl font-heading font-bold mb-8 leading-tight">
+                  Atuação nos Tribunais Superiores
+               </h2>
+               <p className="text-xl text-white/70 mb-10 leading-relaxed font-light border-l-2 border-accent pl-6">
+                  Sede em Porto Alegre, com atuação consolidada em Brasília e em todo o território nacional. Expertise na condução de recursos e sustentações orais perante o STJ e STF.
+               </p>
+               <div className="grid grid-cols-2 gap-8 mb-10">
+                  <div>
+                     <h4 className="text-white font-bold uppercase mb-2">Brasília</h4>
+                     <p className="text-white/50 text-sm">STJ, STF e Tribunais Regionais</p>
+                  </div>
+                  <div>
+                     <h4 className="text-white font-bold uppercase mb-2">Online</h4>
+                     <p className="text-white/50 text-sm">Atendimento digital completo</p>
+                  </div>
+               </div>
+               <Link href="/citacoes">
+                  <Button className="bg-white text-black hover:bg-accent hover:text-black rounded-none px-8 h-12 uppercase tracking-widest font-bold text-xs">
+                     Ver Citações em Tribunais
+                  </Button>
+               </Link>
             </div>
-            <Link href="/atuacao">
-              <a className="text-sm uppercase tracking-widest font-semibold hover:text-accent flex items-center gap-2 mt-4 md:mt-0">
-                Ver todas as áreas <ArrowRight className="w-4 h-4" />
-              </a>
-            </Link>
+         </div>
+      </section>
+
+      {/* Areas of Expertise - Cards */}
+      <section className="py-24 bg-[#F8F9FA]">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 uppercase tracking-tight">Áreas de Atuação</h2>
+            <div className="w-12 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="text-muted-foreground font-serif italic text-lg">
+               Especialização técnica para demandas complexas e sensíveis.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: Scale,
                 title: "Direito Penal Econômico",
-                desc: "Crimes tributários, lavagem de capitais e crimes contra o sistema financeiro."
+                desc: "Defesa em crimes tributários, financeiros e lavagem de capitais."
               },
               {
                 icon: Shield,
                 title: "Compliance Criminal",
-                desc: "Programas de integridade e investigações internas corporativas."
+                desc: "Programas de integridade e gestão de risco corporativo."
               },
               {
                 icon: Users,
-                title: "Risco & Gênero",
-                desc: "Consultoria em assédio e compliance de gênero com abordagem psicológica."
+                title: "Consultoria de Gênero",
+                desc: "Abordagem psicológica e jurídica para casos de assédio."
               },
               {
                 icon: BookOpen,
                 title: "Crimes Digitais",
-                desc: "Crimes contra a honra digital, reputação e concorrência desleal."
+                desc: "Proteção da reputação e crimes contra a honra no ambiente digital."
               }
             ].map((item, index) => (
-              <Card key={index} className="border-none shadow-none hover:bg-secondary/50 transition-colors group cursor-pointer">
-                <CardContent className="pt-6 px-4">
-                  <item.icon className="w-10 h-10 text-accent mb-6 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-xl font-heading font-semibold mb-3 group-hover:text-accent transition-colors">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+              <Card key={index} className="border border-border/50 bg-white shadow-sm hover:shadow-xl hover:border-accent/50 transition-all duration-300 group">
+                <CardContent className="pt-8 px-6 pb-8 text-center">
+                  <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                     <item.icon className="w-7 h-7 text-foreground group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-heading font-bold mb-4 uppercase tracking-wide">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">{item.desc}</p>
+                  <Link href="/atuacao">
+                     <a className="text-accent text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                        Saiba Mais <ArrowRight className="w-3 h-3" />
+                     </a>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Dual Formation Highlight */}
-      <section className="py-24 bg-secondary relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 hidden lg:block skew-x-12 translate-x-32"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="inline-block border border-accent text-accent px-4 py-1 text-xs uppercase tracking-widest mb-6">
-                Diferencial Único
-              </div>
-              <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 leading-tight">
-                Direito + Psicologia: <br/>
-                <span className="text-muted-foreground font-serif italic text-3xl md:text-4xl font-normal">Uma abordagem interdisciplinar</span>
-              </h2>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                A dupla formação em Direito e Psicologia permite uma atuação estratégica única na gestão de crises complexas, especialmente em investigações corporativas e casos sensíveis.
-              </p>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Não se trata apenas de defesa legal, mas de uma compreensão profunda do comportamento humano e das dinâmicas institucionais.
-              </p>
-              <Link href="/sobre">
-                <Button className="rounded-none bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8">
-                  Conheça a Trajetória
-                </Button>
-              </Link>
-            </div>
-            <div className="relative">
-              <div className="aspect-[4/5] bg-background shadow-xl p-4 rotate-3 transition-transform hover:rotate-0 duration-500">
-                 <img src={officeImage} alt="Office" className="w-full h-full object-cover filter sepia-[.2]" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Academic Authority Section (Placeholder for now, keeping it simple) */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-heading font-bold mb-4 uppercase">Autoridade Acadêmica</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-12">
-            Mestre em Ciências Criminais, Especialista em Filosofia e autora de diversas obras jurídicas.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="p-8 border border-border hover:border-accent transition-colors">
-              <h3 className="text-4xl font-bold text-accent mb-2">20+</h3>
-              <p className="uppercase text-xs tracking-widest font-semibold">Anos de Docência</p>
-            </div>
-            <div className="p-8 border border-border hover:border-accent transition-colors">
-              <h3 className="text-4xl font-bold text-accent mb-2">Doc</h3>
-              <p className="uppercase text-xs tracking-widest font-semibold">Participação em Documentário</p>
-            </div>
-            <div className="p-8 border border-border hover:border-accent transition-colors">
-              <h3 className="text-4xl font-bold text-accent mb-2">STJ</h3>
-              <p className="uppercase text-xs tracking-widest font-semibold">Citações em Cortes Superiores</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="py-24 bg-primary text-primary-foreground text-center">
-         <div className="container mx-auto px-6">
-           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8">Agende uma Consulta</h2>
-           <p className="text-white/60 max-w-xl mx-auto mb-10">
-             Atendimento presencial em Porto Alegre e online para todo o Brasil.
-           </p>
-           <Button 
-             className="bg-accent text-primary hover:bg-white hover:text-primary rounded-none h-16 px-10 text-base uppercase tracking-widest font-semibold"
-             onClick={() => window.open("https://wa.me/5551999785539", "_blank")}
-           >
-             Iniciar Atendimento
-           </Button>
-         </div>
       </section>
     </Layout>
   );

@@ -29,14 +29,21 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-background/95 backdrop-blur-md py-4 shadow-sm" : "bg-transparent py-6"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out border-b",
+        scrolled 
+          ? "bg-white/90 backdrop-blur-md py-4 border-border/40 shadow-sm text-foreground" 
+          : "bg-transparent py-6 border-transparent text-white"
       )}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/">
-          <a className="text-2xl font-heading font-bold tracking-tighter uppercase">
-            Thaís<span className="text-accent">.</span>Zanetti
+          <a className="group flex flex-col">
+            <span className={cn("text-2xl font-heading font-bold tracking-tighter uppercase transition-colors", scrolled ? "text-foreground" : "text-white")}>
+              Thaís<span className="text-accent">.</span>Zanetti
+            </span>
+            <span className={cn("text-[0.65rem] tracking-[0.3em] uppercase font-medium opacity-80 transition-colors group-hover:text-accent", scrolled ? "text-muted-foreground" : "text-white/80")}>
+              Advocacia Criminal
+            </span>
           </a>
         </Link>
 
@@ -46,8 +53,9 @@ export function Navbar() {
             <Link key={link.href} href={link.href}>
               <a
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-accent uppercase tracking-widest",
-                  location === link.href ? "text-accent" : "text-foreground/80"
+                  "text-xs font-medium transition-colors hover:text-accent uppercase tracking-widest relative py-2",
+                  location === link.href ? "text-accent" : (scrolled ? "text-foreground/80" : "text-white/90"),
+                  "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
                 )}
               >
                 {link.label}
@@ -56,7 +64,10 @@ export function Navbar() {
           ))}
           <Button 
             variant="outline" 
-            className="border-accent text-accent hover:bg-accent hover:text-background rounded-none px-6 tracking-widest uppercase text-xs"
+            className={cn(
+              "border-accent text-accent hover:bg-accent hover:text-white rounded-none px-6 tracking-widest uppercase text-xs transition-all duration-300",
+              scrolled ? "bg-transparent" : "bg-white/5 backdrop-blur-sm border-accent/50 text-white hover:border-accent"
+            )}
             onClick={() => window.open("https://wa.me/5551999785539", "_blank")}
           >
             Contato
@@ -64,7 +75,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
+        <button className={cn("md:hidden transition-colors", scrolled ? "text-foreground" : "text-white")} onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
